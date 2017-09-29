@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/popIVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Zero"
+        android:inputType="textPersonName"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="135dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/OK"
+        android:layout_below="@+id/popIVal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp" />
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/popIVal"
+        android:layout_alignStart="@+id/popIVal"
+        android:layout_below="@+id/popIVal"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/comment"
+        android:inputType="textPersonName" />
+</RelativeLayout>

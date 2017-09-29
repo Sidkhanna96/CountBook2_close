@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CountBook2</string>
+    <string name="addCounter">Add Counter</string>
+    <string name="nameCounter">Enter Name of Counter</string>
+    <string name="title_activity_counter">CounterActivity</string>
+    <string name="Zero">0</string>
+    <string name="OK">OK</string>
+    <string name="comment">comment</string>
+</resources>
