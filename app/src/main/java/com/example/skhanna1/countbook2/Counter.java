@@ -10,16 +10,21 @@ public class Counter {
 
     String nameOfCounter;
     Date date;
-    Integer currentValue;
-    Integer initValue;
+    String currentValue;
+    String initValue;
+    String comment;
 
-    public Counter(String name){
+    public Counter(String name, String iVal, String Com){
         this.nameOfCounter = name;
         this.date = new Date();
-        this.initValue = 0;
-        this.currentValue=0;
+        this.initValue = iVal;
+        this.comment = Com;
+        this.currentValue = iVal;
     }
 
+    public void setCurrentValue(String value){
+        this.currentValue = value;
+    }
     public String getText(){
         return this.nameOfCounter;
     }
@@ -32,5 +37,7 @@ public class Counter {
         return this.nameOfCounter;
     }
 
-    public Integer getCurrentValue() { return this.currentValue; }
+    public String getCurrentValue() { return this.currentValue; }
+
+    public String getInitValue(){ return this.initValue;}
 }

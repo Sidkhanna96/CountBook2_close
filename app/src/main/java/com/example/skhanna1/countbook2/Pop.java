@@ -4,9 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static java.lang.Integer.parseInt;
 
@@ -14,14 +27,18 @@ import static java.lang.Integer.parseInt;
  * Created by skhanna1 on 9/28/17.
  */
 
-public class pop extends ListActivity {
+public class Pop extends ListActivity {
 
     EditText initialValue;
     EditText comment2;
 
+    //Creating Array with Counter objects
+
 
     String initVal;
     String textComment;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +62,16 @@ public class pop extends ListActivity {
 
             @Override
             public void onClick(View view) {
+
                 initVal = initialValue.getText().toString();
                 textComment = comment2.getText().toString();
+
+                Intent intent2 = new Intent();
+                intent2.putExtra("iVal",initVal);
+                intent2.putExtra("com", textComment);
+                finish();
             }
         });
-
-        //Intent returnIntent = new Intent();
-        //returnIntent.putExtra("result", textComment);
-        //finish();
 
     }
 

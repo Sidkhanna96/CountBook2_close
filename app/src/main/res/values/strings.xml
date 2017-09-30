@@ -6,4 +6,11 @@
     <string name="Zero">0</string>
     <string name="OK">OK</string>
     <string name="comment">comment</string>
+    <string name="title_activity_counter_widget">counterWidgetActivity</string>
+    <string name="increment">+</string>
+    <string name="Decrement">-</string>
+    <string name="Reset">Reset</string>
+    <string name="Delete">Delete</string>
+    <string name="Name">Name</string>
+    <string name="Date">Date</string>
 </resources>
