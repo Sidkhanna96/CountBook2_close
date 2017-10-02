@@ -1,5 +1,7 @@
 package com.example.skhanna1.countbook2;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -22,22 +24,32 @@ public class Counter {
         this.currentValue = iVal;
     }
 
-    public void setCurrentValue(String value){
-        this.currentValue = value;
-    }
-    public String getText(){
-        return this.nameOfCounter;
-    }
-
-    public Date getDate(){
-        return date;
+    public Counter(String name, String iVal){
+        this.nameOfCounter = name;
+        this.initValue = iVal;
+        this.date = new Date();
+        this.comment = "";
+        this.currentValue = iVal;
     }
 
-    public String getName(){
-        return this.nameOfCounter;
+    public String getDate(){
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        return dateFormat.format(date);
     }
+
+    public String getNameOfCounter(){return this.nameOfCounter;}
 
     public String getCurrentValue() { return this.currentValue; }
 
     public String getInitValue(){ return this.initValue;}
+
+    public String getComment(){ return this.comment; }
+
+    public void setCurrentValue(String value){this.currentValue = value;}
+
+    public void setNameOfCounter(String Name){ this.nameOfCounter = Name;}
+
+    public void setInitValue(String Num){ this.initValue = Num; }
+
+    public void setComment(String Commenting){ this.comment = Commenting; }
 }

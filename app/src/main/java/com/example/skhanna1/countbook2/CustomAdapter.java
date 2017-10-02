@@ -23,13 +23,18 @@ public class CustomAdapter extends ArrayAdapter<Counter> {
         super(context, R.layout.custom_list, item);
     }
 
+    public CustomAdapter(Context context, int textViewResourceId) {
+        super(context, textViewResourceId);
+    }
+
     @Override
     public View getView(int position, View customView, ViewGroup parent) {
+
         if (customView == null) {
             LayoutInflater inflating = LayoutInflater.from(this.getContext());
 
             //creating a custom adapter
-            customView = inflating.inflate(R.layout.custom_list, parent, false);
+            customView = inflating.inflate(R.layout.custom_list, null);
         }
         //getting the position of the list item
         Counter counter = getItem(position);
@@ -41,9 +46,8 @@ public class CustomAdapter extends ArrayAdapter<Counter> {
         TextView textVal = (TextView) customView.findViewById(R.id.currentVal);
 
         //Placing the value of the counters into the xml
-        textName.setText(counter.getName().toString());
+        textName.setText(counter.getNameOfCounter().toString());
         textDate.setText(counter.getDate().toString());
-        //Log.d("getCurrentValue", counter.getCurrentValue().toString());
         textVal.setText(counter.getCurrentValue().toString());
 
         return customView;
